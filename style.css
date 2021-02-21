@@ -91,7 +91,6 @@ body {
     z-index: 1;
 }
 
-
 .legs {
     width: 13px;
     height: 40px;
@@ -137,6 +136,20 @@ body {
     position:absolute;
     top: 28px;
     right: 20px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink{
+    0% {
+       transform: scale(1, 0.05);
+    }
+
+    25%, 100% {
+        transform: scale(1,1);
+    }
 }
 
 .tail {
@@ -146,4 +159,4 @@ body {
     position: absolute;
     top: 0px;
     border-radius: 5% 5% 35px 35px;
-}
+}  
